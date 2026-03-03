@@ -1,16 +1,142 @@
-# React + Vite
+# 🪣 Bucket List Tracker (AWS Full-Stack Application)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo:  
+👉 https://main.d2w72mfbxoh3jx.amplifyapp.com/
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Overview
 
-## React Compiler
+Bucket List Tracker is a full-stack cloud application built with React and AWS Amplify.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Users can:
 
-## Expanding the ESLint configuration
+- 🔐 Sign up and log in securely
+- ➕ Create bucket list items
+- 📝 Add descriptions
+- 🖼 Upload images
+- ❌ Delete items
+- 🔒 Access only their own data
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project demonstrates real-world serverless cloud architecture using AWS managed services.
+
+---
+
+## 🏗 Architecture
+
+![Architecture Diagram](assets/architecture.png)
+
+---
+
+## 🚀 Tech Stack
+
+### Frontend
+- React (Vite)
+- AWS Amplify UI Components
+- JavaScript (ES6+)
+
+### Backend (AWS Cloud)
+- AWS Amplify Hosting
+- AWS Cognito (Authentication)
+- AWS AppSync (GraphQL API)
+- Amazon DynamoDB (Database)
+- Amazon S3 (Image Storage)
+
+---
+
+## 🔄 How It Works
+
+1. User accesses the deployed Amplify web application.
+2. Authentication is handled by AWS Cognito.
+3. React frontend communicates with AWS AppSync (GraphQL API).
+4. AppSync performs CRUD operations on DynamoDB.
+5. Uploaded images are securely stored in Amazon S3.
+6. Owner-based authorization ensures users only see their own data.
+
+---
+
+## 🔐 Authentication & Authorization
+
+- Managed by AWS Cognito
+- Email-based login system
+- Owner-based access control using userPools
+- Secure identity-based S3 storage paths
+
+---
+
+## 🗄 Data Model
+
+BucketItem Model:
+
+id: ID  
+title: String  
+description: String  
+image: String  
+createdAt: AWSDateTime  
+updatedAt: AWSDateTime  
+
+Each record is protected with owner-based authorization rules.
+
+---
+
+## 📦 Features
+
+✔ Secure user authentication  
+✔ GraphQL API integration  
+✔ Real-time CRUD operations  
+✔ Image upload to Amazon S3  
+✔ Owner-based data protection  
+✔ Cloud deployment with CI/CD  
+
+---
+
+## 🛠 Local Development
+
+### 1️⃣ Clone Repository
+
+git clone <your-repo-url>  
+cd bucketlistapp  
+
+### 2️⃣ Install Dependencies
+
+npm install  
+
+### 3️⃣ Run Locally
+
+npm run dev  
+
+---
+
+## ☁ Deployment
+
+This application is deployed using AWS Amplify Hosting.
+
+On every:
+
+git push origin main  
+
+Amplify automatically:
+- Builds the application
+- Deploys it
+- Updates the production URL
+
+---
+
+## 📚 What This Project Demonstrates
+
+- Full-stack cloud development
+- Authentication & authorization
+- GraphQL API design
+- Serverless architecture
+- Secure file storage
+- CI/CD deployment pipeline
+
+---
+
+## 👨‍💻 Author
+
+Jerry Wu  
+Computer Science Student (Graduating May 2026)  
+Interested in Backend & Cloud Engineering  
+
+---
