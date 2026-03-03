@@ -133,7 +133,7 @@ Amplify automatically:
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Developer
 
 Jerry Wu  
 Computer Science Student (Graduating May 2026)  
