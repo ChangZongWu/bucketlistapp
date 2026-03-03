@@ -24,7 +24,7 @@ This project demonstrates real-world serverless cloud architecture using AWS man
 
 ## 🏗 Architecture
 
-![Architecture Diagram](assets/architecture.png)
+![Architecture Diagram](assets/bucketList.png)
 
 ---
 
